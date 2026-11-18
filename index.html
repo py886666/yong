@@ -1,37 +1,156 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>py886666 的日常</title>
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
-      background: #f7f8fa;
-      color: #1f2328;
-    }
-    h1 { font-size: 2rem; margin: 0 0 0.8em; letter-spacing: 0.02em; }
-    p { color: #57606a; line-height: 1.8; margin: 0.3em 0; }
-    .box {
-      background: #fff;
-      padding: 48px 56px;
-      border-radius: 14px;
-      box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.06);
-      text-align: center;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日常 · py886666</title>
+<style>
+  :root{
+    --bg:#f6f7f9;
+    --card:#ffffff;
+    --ink:#1f2328;
+    --ink-2:#57606a;
+    --ink-3:#8b949e;
+    --line:#e6e8eb;
+    --accent:#2f6f4f;
+    --accent-soft:#eaf3ee;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    font-size:16px;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:720px;margin:0 auto;padding:72px 24px 96px}
+
+  /* 头部 */
+  header{margin-bottom:56px}
+  .eyebrow{
+    font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--accent);font-weight:600;margin-bottom:14px;
+  }
+  h1{
+    font-size:clamp(28px,5vw,40px);
+    line-height:1.25;margin:0 0 18px;font-weight:700;letter-spacing:-.01em;
+  }
+  .lede{color:var(--ink-2);margin:0;font-size:16.5px}
+  .meta{
+    margin-top:22px;padding-top:18px;border-top:1px solid var(--line);
+    display:flex;gap:20px;flex-wrap:wrap;
+    font-size:13px;color:var(--ink-3);
+  }
+  .meta span{display:inline-flex;align-items:center;gap:6px}
+  .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);display:inline-block}
+
+  /* 正文条目 */
+  article{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:32px 34px;
+    margin-bottom:20px;
+    box-shadow:0 1px 2px rgba(0,0,0,.03);
+  }
+  article h2{
+    font-size:19px;margin:0 0 6px;font-weight:650;letter-spacing:-.005em;
+  }
+  article .when{
+    font-size:12.5px;color:var(--ink-3);margin:0 0 16px;
+    font-variant-numeric:tabular-nums;
+  }
+  article p{margin:0 0 14px;color:#343a40}
+  article p:last-child{margin-bottom:0}
+  .pull{
+    margin:22px 0 0;padding:14px 18px;
+    background:var(--accent-soft);
+    border-left:3px solid var(--accent);
+    border-radius:0 8px 8px 0;
+    color:#2b4a3a;font-size:15px;
+  }
+
+  /* 清单 */
+  ul.plain{list-style:none;padding:0;margin:6px 0 0}
+  ul.plain li{
+    padding:9px 0;border-bottom:1px dashed var(--line);
+    display:flex;gap:12px;color:#343a40;font-size:15.5px;
+  }
+  ul.plain li:last-child{border-bottom:none}
+  ul.plain li::before{
+    content:"";flex:0 0 auto;width:5px;height:5px;margin-top:11px;
+    border-radius:50%;background:var(--ink-3);
+  }
+
+  /* 页脚 */
+  footer{
+    margin-top:56px;padding-top:26px;border-top:1px solid var(--line);
+    font-size:13px;color:var(--ink-3);
+    display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  }
+  footer a{color:var(--ink-2);text-decoration:none;border-bottom:1px solid var(--line)}
+  footer a:hover{color:var(--accent);border-color:var(--accent)}
+
+  @media (max-width:600px){
+    .wrap{padding:48px 18px 72px}
+    article{padding:24px 22px;border-radius:12px}
+    header{margin-bottom:40px}
+  }
+</style>
 </head>
 <body>
-  <div class="box">
-    <h1>py886666</h1>
-    <p>今天，2026 年 11 月 18 日，首次创建 GitHub 个人网址。</p>
-    <p>这里将用于记录日常。</p>
-  </div>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Daily Notes</div>
+    <h1>一块自己的小地方</h1>
+    <p class="lede">没有主题，也不打算有主题。想到什么就写在这里，像抽屉里随手放的便签。</p>
+    <div class="meta">
+      <span><i class="dot"></i>2026 年 11 月 18 日开张</span>
+      <span>第 1 条记录</span>
+    </div>
+  </header>
+
+  <article>
+    <h2>第一天</h2>
+    <p class="when">2026年11月18日 · 星期三</p>
+    <p>今天第一次把 GitHub 的 Pages 用起来。申请这个网址的过程比想象中简单：建一个公开仓库，放一个 <code>index.html</code>，在设置里指定分支，等一两分钟，它就出现在互联网上了。</p>
+    <p>说实话有点微妙——这么容易就有了一块属于自己的地址。以前总觉得「拥有一个网站」是件挺大的事，结果它只是一次 Commit 的距离。</p>
+    <div class="pull">值得记下来的一点：门槛低的事情，往往输在没人真的动手。</div>
+  </article>
+
+  <article>
+    <h2>关于「记录」这件事</h2>
+    <p class="when">随手写</p>
+    <p>我一直不太会写日记。坐下来打开文档，脑子里就开始盘算「这值不值得写」「会不会有人看」，然后就什么都写不出来了。</p>
+    <p>后来发现症结在于：把记录当成作品，就会卡；把它当成留痕，就顺了。一个网站的好处是它可以一直空着，也可以随手补一句，不需要给谁交代。</p>
+    <p>所以这里大概会是这样：</p>
+    <ul class="plain">
+      <li>今天读到的半句话，随手抄一下</li>
+      <li>某个折腾了很久终于跑通的命令</li>
+      <li>走路时想到、回家后还记得的一个念头</li>
+      <li>偶尔没话可说，那就空着</li>
+    </ul>
+  </article>
+
+  <article>
+    <h2>三条清单</h2>
+    <p class="when">写给以后翻到这里的人</p>
+    <p>如果以后我把这件事坚持下来了，那大概率是因为守住了这三条：</p>
+    <ul class="plain">
+      <li>写短一点。三百字写完就停，不为了凑长度展开。</li>
+      <li>写粗一点。不修措辞，回头改得动的只有错别字。</li>
+      <li>写频繁一点。一个月一次，说明它已经死了。</li>
+    </ul>
+  </article>
+
+  <footer>
+    <span>© 2026 py886666</span>
+    <span><a href="https://github.com/py886666/yong">仓库地址</a> · 纯手写 HTML，无框架</span>
+  </footer>
+
+</div>
 </body>
 </html>
